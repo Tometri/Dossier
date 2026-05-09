@@ -9,10 +9,11 @@ git push == sends locally committed changes to remote repo.
 git clone https://github.com/username/example_repo.git == Clones a repository.
 #forks == copies of code made outside the repository.
 #branches == copies of code made inside the repository.
-git branch == creates a new branch from the branch you're in currently [git branch new-branch-name]
+git branch == creates a new branch from the branch you're in currently [git branch new-branch-name. 'git branch --list' shows available branches.]
 git switch == switches to a branch [git switch new-branch-name]
 git checkout -b <new-branch-name> == create and switch to a branch in a single command.
 git pull == updates the branch currently being worked on. 
 git merge <branch-name> == brings changes from one branch to another.
 #pull requests allow you to suggest changes to the repository and create edits from one branch to another.Pull requests are like merges but allow you to merge branches across repositories rather than only in the same repo.
-
+git log == display a detailed history of the project ['git log --oneline' shows one commit per line but with less detail. 'git log --graph' shows a visual diagram, useful for diverging paths]
+git diff == differences between the working directory and the staging area ['git diff --staged' shows differences between staging area and previous commit. 'git diff HEAD~1' shows differences between current commit and previous commit.]
