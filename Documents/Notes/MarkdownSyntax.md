@@ -116,6 +116,17 @@ Alerts:
 Hidden content:
 <!-- This content will not appear in the rendered Markdown -->
 
+Tables:
+
+Tables can be made using a combination of pipes '|' for column breaks and dashes '-' to designate the prior row as a header. 
+
+Ex: 
+
+First|Second
+-|-
+1|2
+3|4
+
 There is much more MD syntax that has not been covered, but guides can be found on GitHub. More precisely, at the time of writing -> https://docs.github.com/en/get-started/writing-on-github 
 
 
