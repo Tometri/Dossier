@@ -119,3 +119,44 @@ Digital-Subscriber-Line(DSL)-> "Provides a high bandwidth, always on, connection
 Cellular-> "Cellular internet access uses a cell phone network to connect. Wherever you can get a cellular signal, you can get cellular internet access. Performance will be limited by the capabilities of the phone and the cell tower to which it is connected. The availability of cellular internet access is a real benefit for people in areas that would otherwise have no internet connectivity at all, or for people who are constantly on the move. The downside of cellular connectivity is that the carrier usually meters the bandwidth usage of the connection and may charge extra for bandwidth that exceeds the contract data plan."
 Satellite-> "Satellite service is a good option for homes or offices that do not have access to DSL or cable. Satellite dishes (see figure) require a clear line of sight to the satellite and so might be difficult in heavily wooded areas or places with other overhead obstructions. Speeds will vary depending on the contract, though they are generally good. Equipment and installation costs can be high (although check the provider for special deals), with a moderate monthly fee thereafter. Like cellular access, the availability of satellite internet access is a real benefit in areas that would otherwise have no internet connectivity at all."
 Dial-up-> "An inexpensive option that uses any phone line and a modem. To connect to the ISP, a user calls the ISP access phone number. The low bandwidth provided by a dial-up modem connection is usually not sufficient for large data transfer, although it is useful for mobile access while traveling. A modem dial-up connection should only be considered when higher speed connection options are not available."
+
+#Wireless and Mobile Networks:
+Global Positioning System(GPS)-> Uses satellite to transmit signals which can be received by a smartphone, or other GPS compatible devices, to calculate location to an accuracy of within ten meters.
+Wi-Fi-> Transmitters and recivers located within a phone enable the connection to local networks and the internet. A hotspot is an area where Wi-Fi signals are available. Wi-Fi network connections on the phone are similar to the network connections on a laptop computer.
+Bluetooth-> Low-power, short-range wireless technology intended to replace wired connectivity for accessories such as speakers, headphones, and microphones. It can transmit data and voice, and be used to create small local networks that allow multiple devices to connect and communicate over short distances.
+Near Field Communnication(NFC)-> A wireless communication technology that enables data to be exchanged by devices that are in very close proximity to each other (Usually less than a few centimeters.)
+
+#LAN Wireless Frequencies:
+The most frequently used wireless technologies in home networks are in the unlicensed 2.4 GHz and 5 GHz frequency ranges. Bluetooth makes use of the 2.4 GHz band: it is limited to low-speed, short-range communications, but has the advantage of communicating with many devices at the same time. Other technologies using the 2.4/5 GHz bands are the modern wireless LAN technologies that conform to the various IEEE 802.11 standards. 802.11 devices transmit at a much higher power level giving them a great range and improved throughput. Certain areas of the electro-magnetic spectrum can be used without a permit.
+
+#Wired Network Technologies:
+The most commonly implemented wired protocol is the Ethernet protocol. Ehternet uses a suite of protocols that allow network devices to communicate over a wired LAN connection. An Ethernet LAN can connect devices using many types of wiring media. Directly connected devices use an Ethernet patch cable, usually unshielded twisted pair. 
+
+Category 5e cable-> The most common wiring in LAN, made up of four pairs of wires that are twisted to reduce electrical interference.
+Coaxial cable-> Has an inner wire surrounded by a tubular insulating layer, that is then surrounded by a tubular conducting shield. Most coax cables have an external insulating sheath or jacket.
+Fiber optic cable-> Can either be glass or plastic with a diameter about the same as a human hair and it can carry digital information at very high speeds over long distances. They have a very high bandwidth, enabling them to carry very large amounts of data.
+
+#Wireless Standards:
+A number of standards have been developed to ensure wireless devices can communicate. They specify the radio frequency (RF) spectrum used, data rates, how the information is transmitted, etc. The main organization responsible for the creation of wireless technical standards is the Institute of Electrical and Electronics Engineers (IEEE) The IEEE 802.11 standard governs the WLAN environment. There are amendments to the IEEE 802.11 standard that describe the characteristics for different standards of wireless comms. Wireless standards use the 2.4/5 GHz frequency bands. Collectively these technologies are referred to as Wi-Fi. Another org, the Wi-Fi Alliance, is responsible for testing wireless LAN devices from different manufacturers. The Wi-Fi logo on a device means that this equipment meets the standards and should operate with other devices that use the same standard.
+
+Wireless routers using the 802.11 standards have multiple settings that have to be configured, including: 
+Network Mode-> Determines the type of technology that must be supported (802.11b, 802.11g, 802.11n, mixed mode)
+Network Name (SSID)-> Used toidentify the WLAN. All devices that wish to participate in the WLAN must have the same SSID.
+Standard Channel-> Specifies the channel over which communication will occur. By default, this is set to 'Auto' to allow the access point (AP) to determine the optimum channel to use.
+SSID Broadcast-> Determines if the SSID will be broadcast to all devices within range. By default, set to 'Enabled'. 
+SSID==Service Set Identifier.
+
+Excerpt from Cisco NetAcad: 
+"The 802.11 protocol can provide increased throughput based on the wireless network environment. If all wireless devices connect with the same 802.11 standard, maximum speeds can be obtained for that standard. If the access point is configured to accept only one 802.11 standard, devices that do not use that standard cannot connect to the access point.
+
+A mixed mode wireless network environment can include devices that use any of the existing Wi-Fi standards. This environment provides easy access for older devices that need a wireless connection but do not support the latest standards.
+
+When building a wireless network, it is important that the wireless components connect to the appropriate WLAN. This is done using the SSID.
+
+The SSID is a case-sensitive, alphanumeric string that contains up to 32 characters. It is sent in the header of all frames transmitted over the WLAN. The SSID is used to tell wireless devices, called wireless stations (STAs), which WLAN they belong to and with which other devices they can communicate.
+
+We use the SSID to identify a specific wireless network. It is essentially the name of the network. Wireless routers usually broadcast their configured SSIDs by default. The SSID broadcast allows other devices and wireless clients to automatically discover the name of the wireless network. When the SSID broadcast is disabled, you must manually enter the SSID on wireless devices.
+
+Disabling SSID broadcasting can make it more difficult for legitimate clients to find the wireless network. However, simply turning off the SSID broadcast is not sufficient to prevent unauthorized clients from connecting to the wireless network. All wireless networks should use the strongest available encryption to restrict unauthorized access."
+
+#Communication Protocols
