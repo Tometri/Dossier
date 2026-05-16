@@ -1,0 +1,6 @@
+year = int(input("Enter the year: "))
+focus = float(input("Enter your focus level (0.0 to 1.0): "))
+skin = str(input("Name something holding you back: "))
+shedding = bool(input("Are you shedding your old skin? (True/False): "))
+print("In the year", year, "with a focus level of", focus, "and shedding your old skin:", shedding)
+print("Remember, the only thing holding you back is", skin, "but with determination and shedding your old skin, you can overcome it and achieve great things!")

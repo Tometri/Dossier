@@ -1,0 +1,12 @@
+countries = ['germany', 'japan', 'korea', 'canada', 'rhodesia']
+print("Original list:" + str(countries))
+print("Sorted list:" + str(sorted(countries)))
+print("Original list:" + str(countries))
+countries.reverse()
+print("Reversed list:" + str(countries))
+countries.reverse()
+print("Unreversed list:" + str(countries))
+countries.sort()
+print("Permanently sorted list:" + str(countries))
+countries.sort(reverse=True)
+print("Permanently reverse sorted list:" + str(countries))

@@ -1,4 +1,4 @@
-#Network Types:
+# Network Types
 
 Internet-> Worldwide collection of interconnected networks using common standards to exchange information.
 
@@ -26,7 +26,7 @@ Radio Frequency Identification (RFID) Tags-> Can be placed in or on objects to t
 Sensors and Actuators-> Sensors can provide environmental data (temp., humidity, wind speed, etc) which allows actuators to trigger based on conditions relayed from sensors.
 Medical Devices-> Pacemakers, insulin pumps, hospital monitors give feedback based on vital signs.
 
-#Data Transmission
+# Data Transmission
 
 Computers and networks only communicate with binary digits (bits). A bit can only be stored/transmitted in two possible states: 1 (on) or 0 (off). Binary codes, such as those defined in ASCII (American Standard Code for Information Interchange), use bits to represent and interpret things such as letters or numbers. In ASCII each character is represented with eight bits.
 Bytes are groups of eight bits.
@@ -41,22 +41,22 @@ Volunteered-> Created and explicitly shared.
 Observed-> Captured by recording the actions of individuals, such as location while using a phone.
 Inferred-> Data such as a credit score, which is based on an analysis of volunteered or observed data.
 
-#Bandwidth
+# Bandwidth
 
 Bandwidth is the capacity of a medium to carry data. Digital bandwidth measures the amount of data that can flow from one place to another in a given amount of time, and is usually measured in the number of bits that (theoretically) can be sent across the media in a second.
 Common measurements are bps, Kbps, Mbps, Gbps, and Tbps.
 Bits-per-second(bps)-> 1 bps = fundamental unit of bandwidth.
 Kilobits-per-second(Kbps)-> 1 Kbps = 1,000 bps = 10³bps
-Megabits-per-second(Mbps)-> 1 Mbps = 1,000,000 bps = 
-Gigabits-per-second(Gbps)-> 1 Gbps = 1,000,000,000 bps = 
+Megabits-per-second(Mbps)-> 1 Mbps = 1,000,000 bps =
+Gigabits-per-second(Gbps)-> 1 Gbps = 1,000,000,000 bps =
 Terabits-per-second(Tbps)-> 1 Tbps = 1,000,000,000,000 bps =
 
-#Throughput
+# Throughput
 
 Throughput is the measure of the transfer of bits across the media over a given period of time. Due to multiple factors, throughput does not match the specified bandwidth. These include the amount of data sent/received over a connection, types of data being transmitted, and latency created by the number of network devices encountered between source and destinations.
 Latency refers to the amount of time, including delays, for data to travel from one point to another.
 
-#Client and Server Roles:
+# Client and Server Roles
 
 All computers connected to a network that directly participate in network communication are classified as hosts. Hosts can send and receive messages on the network.
 In modern networks, computer hosts can act as a client, a server, or both--this is determined by the software installed on the host.
@@ -65,7 +65,7 @@ Each service requires separate server software. Ex: a host requires a web server
 Clients are computer hosts that have software installed that enables the hosts to request and display information obtained from a server. Ex: a web browser installed on the client.
 The web server runs web software. The client uses browser software to access web pages on the server.
 
-#Peer-to-Peer Networks (P2P):
+# Peer-to-Peer Networks (P2P)
 
 P2P networks work when many computers function as both servers and clients on the network.
 The simplest version of this consists of two directly connected (wired or wirelessly), with both exchanging data as necessary with each other; acting as either a client or a server as necessary.
@@ -84,17 +84,17 @@ Disadvantages:
 -Not scalable
 -All devices may act as both server and client, slowing performance
 
-#Peer-to-Peer Applications
+# Peer-to-Peer Applications
 
 P2P applications allow devices to act as both client/server within the same communication. P2P apps require each end device to provide a user interface and to run a background service.
 
-#Multiple Roles in the Network
+# Multiple Roles in the Network
 
 A single computer can run multiple types of server software (file server, email server, web server, etc.), and a single computer can run multiple types of client software.
 Every server software providing a service needs a client software to access the service.
 With multiple clients installed a host can connect to multiple servers, allowing a user to check email in a web page while listening to radio and instant messaging.
 
-#Network Infrastructure
+# Network Infrastructure
 
 Network infrastructure contains three categories of hardware components.
 End Devices-> Desktop computer, laptop, printer, IP phone, wireless tablet, etc.
@@ -103,16 +103,17 @@ Network Media-> Wireless media, LAN media, WAN media.
 
 An end device (or host) is either the source or the destination od messages transmitted over a network. Addresses are used to identify hosts. When a host initiates communications it uses the address of the destination host to specify where the message should be sent.
 
-#ISP Services:
+# ISP Services
 
 An Internet Service Provider (ISP) provides the link between a home network and the internet. ISPs also provide additional services, these include: web hosting, FTP hosting, App and Media hosting, technical support, Voice Over IP (VOIP), POP internet access, equipment co-location, etc.
 
-#ISP Connections:
+# ISP Connections
+
 "The interconnection of ISPs that forms the backbone of the internet is a complex web of fiber-optic cables with expensive networking switches and routers that direct the flow of information between source and destination hosts. Average home users are not aware of the infrastructure outside of their network. For a home user, connecting to the ISP is a fairly uncomplicated process."
 The simplest ISP connection is: "It consists of a modem that provides a direct connection between a computer and the ISP. This option should not be used though, because your computer is not protected on the internet."
 The most common type of connection uses a router: "It consists of using a wireless integrated router to connect to the ISP. The router includes a switch to connect wired hosts and a wireless AP to connect wireless hosts. The router also provides client IP addressing information and security for inside hosts."
 
-#Cable and DSL Connections:
+# Cable and DSL Connections
 
 Cable-> "Typically offered by cable television service providers, the internet data signal is carried on the same coaxial cable that delivers cable television. It provides a high bandwidth, always on, connection to the internet. A special cable modem separates the internet data signal from the other signals carried on the cable and provides an Ethernet connection to a host computer or LAN."
 Digital-Subscriber-Line(DSL)-> "Provides a high bandwidth, always on, connection to the internet. It requires a special high-speed modem that separates the DSL signal from the telephone signal and provides an Ethernet connection to a host computer or LAN. DSL runs over a telephone line, with the line split into three channels. One channel is used for voice telephone calls. This channel allows an individual to receive phone calls without disconnecting from the internet. A second channel is a faster download channel, used to receive information from the internet. The third channel is used for sending or uploading information. This channel is usually slightly slower than the download channel. The quality and speed of the DSL connection depends mainly on the quality of the phone line and the distance from the central office of your phone company The farther you are from the central office, the slower the connection."
@@ -120,33 +121,37 @@ Cellular-> "Cellular internet access uses a cell phone network to connect. Where
 Satellite-> "Satellite service is a good option for homes or offices that do not have access to DSL or cable. Satellite dishes (see figure) require a clear line of sight to the satellite and so might be difficult in heavily wooded areas or places with other overhead obstructions. Speeds will vary depending on the contract, though they are generally good. Equipment and installation costs can be high (although check the provider for special deals), with a moderate monthly fee thereafter. Like cellular access, the availability of satellite internet access is a real benefit in areas that would otherwise have no internet connectivity at all."
 Dial-up-> "An inexpensive option that uses any phone line and a modem. To connect to the ISP, a user calls the ISP access phone number. The low bandwidth provided by a dial-up modem connection is usually not sufficient for large data transfer, although it is useful for mobile access while traveling. A modem dial-up connection should only be considered when higher speed connection options are not available."
 
-#Wireless and Mobile Networks:
+# Wireless and Mobile Networks
+
 Global Positioning System(GPS)-> Uses satellite to transmit signals which can be received by a smartphone, or other GPS compatible devices, to calculate location to an accuracy of within ten meters.
 Wi-Fi-> Transmitters and recivers located within a phone enable the connection to local networks and the internet. A hotspot is an area where Wi-Fi signals are available. Wi-Fi network connections on the phone are similar to the network connections on a laptop computer.
 Bluetooth-> Low-power, short-range wireless technology intended to replace wired connectivity for accessories such as speakers, headphones, and microphones. It can transmit data and voice, and be used to create small local networks that allow multiple devices to connect and communicate over short distances.
 Near Field Communnication(NFC)-> A wireless communication technology that enables data to be exchanged by devices that are in very close proximity to each other (Usually less than a few centimeters.)
 
-#LAN Wireless Frequencies:
+# LAN Wireless Frequencies
+
 The most frequently used wireless technologies in home networks are in the unlicensed 2.4 GHz and 5 GHz frequency ranges. Bluetooth makes use of the 2.4 GHz band: it is limited to low-speed, short-range communications, but has the advantage of communicating with many devices at the same time. Other technologies using the 2.4/5 GHz bands are the modern wireless LAN technologies that conform to the various IEEE 802.11 standards. 802.11 devices transmit at a much higher power level giving them a great range and improved throughput. Certain areas of the electro-magnetic spectrum can be used without a permit.
 
-#Wired Network Technologies:
-The most commonly implemented wired protocol is the Ethernet protocol. Ehternet uses a suite of protocols that allow network devices to communicate over a wired LAN connection. An Ethernet LAN can connect devices using many types of wiring media. Directly connected devices use an Ethernet patch cable, usually unshielded twisted pair. 
+# Wired Network Technologies
+
+The most commonly implemented wired protocol is the Ethernet protocol. Ehternet uses a suite of protocols that allow network devices to communicate over a wired LAN connection. An Ethernet LAN can connect devices using many types of wiring media. Directly connected devices use an Ethernet patch cable, usually unshielded twisted pair.
 
 Category 5e cable-> The most common wiring in LAN, made up of four pairs of wires that are twisted to reduce electrical interference.
 Coaxial cable-> Has an inner wire surrounded by a tubular insulating layer, that is then surrounded by a tubular conducting shield. Most coax cables have an external insulating sheath or jacket.
 Fiber optic cable-> Can either be glass or plastic with a diameter about the same as a human hair and it can carry digital information at very high speeds over long distances. They have a very high bandwidth, enabling them to carry very large amounts of data.
 
-#Wireless Standards:
+# Wireless Standards
+
 A number of standards have been developed to ensure wireless devices can communicate. They specify the radio frequency (RF) spectrum used, data rates, how the information is transmitted, etc. The main organization responsible for the creation of wireless technical standards is the Institute of Electrical and Electronics Engineers (IEEE) The IEEE 802.11 standard governs the WLAN environment. There are amendments to the IEEE 802.11 standard that describe the characteristics for different standards of wireless comms. Wireless standards use the 2.4/5 GHz frequency bands. Collectively these technologies are referred to as Wi-Fi. Another org, the Wi-Fi Alliance, is responsible for testing wireless LAN devices from different manufacturers. The Wi-Fi logo on a device means that this equipment meets the standards and should operate with other devices that use the same standard.
 
-Wireless routers using the 802.11 standards have multiple settings that have to be configured, including: 
+Wireless routers using the 802.11 standards have multiple settings that have to be configured, including:
 Network Mode-> Determines the type of technology that must be supported (802.11b, 802.11g, 802.11n, mixed mode)
 Network Name (SSID)-> Used toidentify the WLAN. All devices that wish to participate in the WLAN must have the same SSID.
 Standard Channel-> Specifies the channel over which communication will occur. By default, this is set to 'Auto' to allow the access point (AP) to determine the optimum channel to use.
-SSID Broadcast-> Determines if the SSID will be broadcast to all devices within range. By default, set to 'Enabled'. 
+SSID Broadcast-> Determines if the SSID will be broadcast to all devices within range. By default, set to 'Enabled'.
 SSID==Service Set Identifier.
 
-Excerpt from Cisco NetAcad: 
+Excerpt from Cisco NetAcad:
 "The 802.11 protocol can provide increased throughput based on the wireless network environment. If all wireless devices connect with the same 802.11 standard, maximum speeds can be obtained for that standard. If the access point is configured to accept only one 802.11 standard, devices that do not use that standard cannot connect to the access point.
 
 A mixed mode wireless network environment can include devices that use any of the existing Wi-Fi standards. This environment provides easy access for older devices that need a wireless connection but do not support the latest standards.
@@ -159,4 +164,4 @@ We use the SSID to identify a specific wireless network. It is essentially the n
 
 Disabling SSID broadcasting can make it more difficult for legitimate clients to find the wireless network. However, simply turning off the SSID broadcast is not sufficient to prevent unauthorized clients from connecting to the wireless network. All wireless networks should use the strongest available encryption to restrict unauthorized access."
 
-#Communication Protocols
+# Communication Protocols
