@@ -171,8 +171,11 @@ Disabling SSID broadcasting can make it more difficult for legitimate clients to
 Networking Protocols define many aspects of communication including:
 
 - Message Format-> When a message is sent it must use a specific format or structure. Format depends on the type of message and the channel used to deliver the message.
-- Message Size-> The rules
-- Timing->
-- Encoding->
-- Encapsulation->
-- Message Pattern->
+- Message Size-> The rules that govern the size of the pieces communicated across the network are very strict. They also vary by the channel being used. When a long message is sent from one host to another on a network, it may be required to break it down into smaller pieces. To ensure the message can be delivered reliably.
+- Timing-> Many network communication functions are dependent on timing. Timing determines the speed at which bits are transmitted across the network. It also affects when an individual host can send data and the total amount of data that can be sent in any one transmission.
+- Encoding-> Messages sent across the network are first converted into bits by the sending host. Each bit is encoded into a pattern of sounds, light waves, or electrical impulses depending on the network media over which the bits are transmitted. The destination host receives and decodes the signals in order to interpret the message.
+- Encapsulation-> Each message on a network must include a header that contains addressing information that identifies the source and destination hosts, otherwise it cannot be delivered. Encapsulation is the process of adding this information to the pieces of data that make up the message. In addition to addressing, there may be other information in the header that ensures that the message is delivered to the correct application on the destination host.
+- Message Pattern-> Some messages require an acknowledgement before the next message can be sent. This type of request/response pattern is a common aspect of many networking protocols. However, there are other types of messages that may be simply streamed across the network, without concern as to whether they reach their destination.
+
+## Communication Standards
+
