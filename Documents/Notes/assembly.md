@@ -17,3 +17,11 @@ In general there are four steps known as the compilation process which compose t
 - Linking: The process of filling in function calls, including additional objects, libraries, and source code from other locations into the main source code.
 
 CodeAcademy: "While the compilation process is tailored to each language and architecture, the overall procedure is fairly standard. It is in the compiling and assembling stages where Assembly is generated and used to create machine code."
+
+## Assembly Code Format
+
+Assembly language and binary code have an almost direct translation between their outputs.
+CodeAcademy:"Assembly was created as a mnemonic language to make machine code easier to read and write, one instruction translating to one instruction. In fact, most ISAs will have both the binary code and Assembly language breakdown on the same page when talking about specific instructions. "
+Assembly, like binary, begins with an opcode.
+Ex: Multiply function = MULT $3, $2.
+In most Assembly instructions, what follows the opcodes are the memory locations to be operated on. These memory locations are referred to as operands. Generally, these are direct register addresses but can also be memory references to values stored in other types of memory such as the cache or RAM. 
