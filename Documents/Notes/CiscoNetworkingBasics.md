@@ -294,3 +294,15 @@ The Preamble and Start Frame Delimiter (SFD) indicate the beginning of an Ethern
 Ethernet operates at layer 2, the data link layer, of the OSI model.
 
 ## The Access Layer
+
+- Ethernet switches make their forwarding decision based on destination MAC address.
+- Ethernet switches add entries to their MAC address table based on the source MAC address.
+- When a switch receives an Ethernet frame and the destination MAC address of that frame is not in its MAC
+- Ethernet hubs are considered obsolete.
+- A layer 2 switch determines how to handle incoming frames by using its MAC address table. When an incoming frame contains a destination MAC address that is not in the table, the switch forwards the frame out all ports, except for the port on which it was received.
+- If a MAC address is found in the MAC address table, then data is sent to the associated switch port. If the MAC address is not found in the MAC address table, the data is sent to all switch ports that have devices attached to the same network.
+- A switch builds a MAC address table by inspecting incoming layer 2 frames and recording the source MAC address found in the frame header. The discovered and recorded MAC address is then associated with the port used to receive the frame.
+- The Frame Check Sequence (FCS) field in a frame is used to detect any errors in the transmission and receipt of a frame. This is done by comparing the Cyclic Redundancy Check (CRC) value within the frame against the computed CRC value of the frame. If the two values do not match, then the frame is discarded.
+- A switch builds a MAC address table of MAC addresses and associated port numbers by examining the source MAC address found in inbound frames. To forward a frame onward, the switch examines the destination MAC address, looks in the MAC address for a port number associated with that destination MAC address, and sends it to the specific port. If the destination MAC address is not in the table, the switch forwards the frame out all ports except the inbound port that originated the frame.
+- To maintain the MAC address table, the switch uses the source MAC address of the incoming ackets and the port that the packets enter. The destination address is used to select the outgoing port.
+- Switched build their MAC address tables based on the source MAC address of incoming frames. Broadcast frames and frames with a destination MAC address that is not in the MAC address table are flooded out all active ports except the one that received the frame. Unicast frames are not always forwarded. Received frames with a destination MAC address that is associated with the switch port on which it is received are not forwarded because the destination exists on the network segment connected to that port.
