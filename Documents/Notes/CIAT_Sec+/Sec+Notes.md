@@ -93,22 +93,538 @@ Examples:
 
 #### Preventative
 
+Preventative controls are proactively implemented to thwart incidents before they occur.
 
+Examples:
+
+- Access Lists
+- Passwords
+- Fences
 
 #### Deterrent
 
+Deterrent controls aim to deter the thrat actors from launching offensive assaults on an organization's environments.
+Similar to preventative controls, but deterrent controls focus on discouraging attackers solely because the control exists.
 
+Examples:
+
+- Alarm system signs
+- Web banner warning about unathorized login attempts being logged
 
 #### Detective
 
-
+Detective controls are designed to detect and monitor unathorized behaviors and other hazards.
+They issue alerts about failures in other controls; valuable during an attack and post-incident analysis.
 
 #### Corrective
 
+Corrective controls are meant to be implemented after an incident to limit damage and facilitate quick recovery.
 
+Examples:
+
+- Tape backup
+- Hot sites
+- Quarantining an infected computer
 
 #### Compensating
 
+Compensating controls are implemented to meet security requirements that are impractical or too challenging to implement.
 
+- Alternatives to costly or difficult to deploy security measures
+- Use with caution as they do not provide the same level of security as replaced controls
 
 #### Directive
+
+Directive controls guide the operation and use of systems within an organization
+They direct individuals toward secure behavior and establish security conscious culture.
+
+Examples:
+
+- Standards
+- Procedures
+- Policy guidelines
+- Security awareness training
+
+## Block 2: Authentication and Access Controls
+
+### Provisioning/De-Provisioning User Accounts
+
+Provisioning: Setting up a user account with necessary permissions and access settings.
+De-provisioning: Disabling or removing permissions and settings from a user account.
+
+Well managed provisioning/de-provisioning are crucial for ensuring users always have appropriate access.
+
+### Permission Assignments and Implications
+
+Permission assignment: Granting specific levels of access or activities (read, edit, delete) to users, groups, or system processes.
+
+Types of permission assignments:
+
+- User level
+- Group level
+- Role based
+- Resource based
+
+### Identity proofing
+
+Identity proofing is the process of verifying a user's or system's identity within an organization.
+Involves multiple levels of authentication from passwords to biometrics.
+
+### Federation
+
+Federation: One system authenticates users and sends their authentication information to other systems.
+
+### Centralized vs Decentralized
+
+Centralized access control:
+
+- one entity responsible for administering access to resources
+- characterized by consoloidating control, data storage, and processing in a single location or server.
+- offers uniformity and consistency
+
+Decentralized access control:
+
+- more than one entity is responsible for administering access to resources
+
+### Single Sign On (SSO)
+
+Single sign on enables one set of credentials for access to multiple services or applications.
+
+SSO Protocols:
+
+- LDAP: Lightweight Directory Access Protocol
+- OAuth: Open Authorization
+- SAML: Security Assertion Markup Language
+
+### Interoperability
+
+Interoperability is the ability of different systems to work together. It's crucial for identity and access management (IAM) systems.
+
+IAM systems need to integrate seamlessly with various databases, applications, and authentication protocols. Lack of integration interferes with needs for access and auditing.
+
+### Attestation
+
+Attestation provides evidence or proof, allowing one program or system to authenticate itself to another.
+
+Remote attestation enables a system to make reliable statements about the software its running to another system, which can make authorization decisions based on that information.
+
+A TPM (Trusted Platform Model) quote operation verifies the contents of a TPM chip's platform configuration registers (PCRs) during provisioning.
+
+Methods of attestation may be vulnerable to replay attacks, masquerading, and other cyber threats.
+
+### Access Controls
+
+Access controls organize and manage admission to physical areas and computer systems.
+
+#### Role Based Access Control (RBAC)
+
+RBAC is controlled by the system, not the resource owner. When a user is assigned a role, they get access to its resources.
+
+#### Rule Based Access Control
+
+Rule based access control is also known as label-based access control. Example: A rule governing access->During certain hours each day, only certain IP addresses may have access.
+
+#### Mandatory Access Control (MAC)
+
+MAC is the strictest control.
+
+### Multi-Factor Authentication (MFA)
+
+MFA is the process of authenticating a user by validating two or more claims from different categories of factors.
+
+Factor categories:
+
+- something you know
+- something you have
+- something you are
+
+Biometrics (distinctive body measurements) and security keys (hardware devices) may be a part of MFA.
+
+#### 2-Factor Authentication
+
+A subset of MFA in which two factors are required to authenticate.
+
+### Password Concepts
+
+Password concepts are guidelines and practices for ensuring strong, secure passwords.
+
+Passwords serve as the primary barrier to protect sensitive information and access controls
+
+Issues to consider when setting password requirements:
+
+- Password length
+- Password complexity
+- Password reuse
+- Password expiration
+- Password age
+
+### Privileged Access Management (PAM) Tools
+
+PAM tools centrally manage access to privileged accounts based on the principle of least privilege.
+
+Just-in-time (JIT) permissions: give access for a limited time.
+Ephemeral credentials are generated for specific sessions or tasks and invalidated shortly after completion. They expire more quickly than JIT permissions.
+Password vaulting means using a centralized, encrypted repository to store various access credentials.
+
+### Permissions
+
+Permissions define the rights to perform actions on a system and are associated with files, directories, or processes.
+
+In windows, permissions are managed using security identifiers (SID) and ACLs
+In Linux, file permissions are represented symbolically or numerically. Linux has fewer permissions than windows.
+
+Best practices for permissions include granting them to security groups rather than individual users and using central management for easier control.
+
+### Least Privilege
+
+The principle of least privilege advocates for granting individuals or systems only the necessary access or permissions to perform their tasks.
+
+## Block 3: Cryptography Deep Dive
+
+### Encryption
+
+Converts information into a coded format to prevent unauthorized access.
+
+Different levels of encryption offer varying degrees of protection
+
+- Full-disk: secures an entire hard drive.
+- Partition:
+- File:
+
+### Transport/Communication
+
+Data security and encryption are essential, whether the data is at rest, in transit, or in use.
+
+### Algorithms, Key Length, and Tools
+
+Algorithms: Mathematical formulas used in cryptographic processes
+Key length: The number of bits in an encryption algorithm's key; longer keys typically provide stronger encryption
+Tools: Specialized technologies and protocols for securing and managing digital information throughout its lifecycle
+
+### Symmetric vs Asymmetric Encryption
+
+#### Symmetric Encryption
+
+Symmetric encryption uses a single key for both encryption and decryption.
+
+#### Asymmetric Encryption
+
+Asymmetric Encryption uses a pair of keys: A public key for encryption and a private key for decryption.
+
+### Trusted Platform Module and Hardware Security Module
+
+#### Trusted Platform Module (TPM)
+
+A hardware based security technology using a secure cryptoprocessor chip to execute cryptographic operations, generate and manage cryptographic keys, authenticate platform devices, and ensure platform integrity by storing security measurements.
+
+#### Hardware Security Module (HSM)
+
+A physical device serving as a secure cryptoprocessor, providing faster encryption than software based solutions, and generally tamper proof
+
+### Hashing and Salting
+
+#### Hashing
+
+Hashing is a one way function that maps data to a fixed length value, primarily for authentication and ensuring data integrity by verifying that it hasn't been altered.
+
+#### Salting
+
+Salting is adding random data to a password before hashing to enhance security.
+
+#### Peppering
+
+Similar to salting, but added to the end rather than the beginning of a password.
+
+##### Hashing vs Encryption
+
+Hashing promotes integrity, Encryption promotes authentication.
+
+### Digital Signatures
+
+A digital signature is a mathematical scheme used to verify the authenticity and integrity of a digital message or document.
+
+Three algorithms used in a digital signature: Key-generation algorithm, signing algorithm, signature verifying algorithm.
+
+Two properties required for a digital signature: Authenticity verification, private key.
+
+### Public Key Infrastructure (PKI)
+
+PKI encompasses key management, Certificate Authorities (CAs), intermediate CAs, and Registration Authorities (RAs).
+
+PKI enables secure connections for websites, email transmissions, and remote access by utilizing asymmetric key pairs consisting of public and private keys.
+
+Private keys are kept secret, while public keys can be distributed. Private key escrow may be provided by trusted third parties.
+
+### Key Exchange
+
+Key Exchange, also known as key establishment, is a cryptographic process that enables two parties to exchange crypographic keys.
+
+### Key Management System (KMS)
+
+A KMS safeguards digital data by managing codes used to lock and unlock data.
+
+Main Functions:
+
+- Generates cryptographic keys
+- Stores keys securely
+- Exchanges keys
+- Key use and access control
+- Key replacement and rotation
+
+### Secure Enclave
+
+A secure enclave is a hardware based feature found in devices like iphones.
+
+It segregates encryption tasks and runs on a seperate microprocessor with its own operating system.
+
+Designed to resist tampering, it prevents access to its data through strict protocols.
+
+The enclave is resistant to software and hardware attacks.
+
+### Obfuscation and Steganography
+
+#### Obfuscation
+
+Obfuscation is a technique used to protect sensitive information by altering or diwguising the original data to prevent easy comprehension or access by unauthorized users.
+
+#### Steganography
+
+Steganography is the practice of concealing secret messages within seemingly innocous carriers (Audio, Video, Image)
+
+### Key Stretching
+
+Key stretching is a cryptographic technique used to enhance the security of weak keys against brute force attacks.
+
+Salt: randomly generated data added to a password before hashing to prevent the same password from producing the same hash value.
+
+Pepper: Another randomly generated value added to a password hash kept secret and separate from the hashed password.
+
+### Blockchain and Open Public Ledger
+
+#### Blockchain
+Blockchain is a secure and immutable digital ledger technology that records transactions across a network of computer systems in a decentralized manner.
+
+#### Open Public Ledger
+
+Open public ledger is a component of blockchain technology that organizes transaction information into blocks that are chained together chronologically.
+
+### Certificates
+
+Certificate: a digital document issued by a CA (Certificate Authority) to verify the identity of the certificate holder and ensure the legitimacy of online communications.
+
+### Certificate Authorities
+
+CAs are entities, typically servers, responsible for issuing certificates to users in a PKI (Public Key Infrastructure) system, serving as a trusted third party to validate identities and secure digital exchanges
+
+## Block 4: Network Security Architecture
+
+### Network Infrastructure
+
+Encompasses an organizations essential hardware and software for network connectivity, communication, operations, and management.
+
+### Security Zones
+
+Security zones are segregated areas in a network under specific security policies and controls.
+
+#### Internal Zones
+
+Internal zones are trusted segments in which sensitive or internal data is processed.
+
+#### External Zones
+
+External zones are areas allowing connections from public internet or other untrusted networks.
+
+#### Screened Subnet
+
+Screened subnet is a specialized external zone that isolates public facing services from the internet
+
+#### Specialized Zones
+
+Specialized zones are designed to meet regulatory compliance requirements
+
+### Attack Surface
+
+An attack surface is all the vulnerabilities and potential access points an attacker could use to gain access to the system.
+
+### Connectivity
+
+How networks, systems, and applications connect and communicate
+
+### Failure Modes
+
+#### Fail-open Configuration
+
+System remains available if a portion fails
+
+#### Fail-closed configuration
+
+Entire system becomes inaccessible if a portion fails
+
+### Device Attribute
+
+A device attribute is a characteristic determining device operation in a network environment
+
+#### Active vs Passive
+
+Active/active: devices share workload simultaneously; critical for fail over or load balancing.
+
+Active/passive: One device active, another on standby: passive activates if active fails or manually switched.
+
+#### Inline monitoring vs tap/monitor mode
+
+Inline monitoring: device is placed directly in the traffic flow, allowing active intervention.
+
+Tap/monitor mode: device observes traffic without interfering.
+
+### Network Appliances
+
+Essential for network functionality, security, and efficiency
+
+### Port Security
+
+Port security is vital for safeguarding network access and preventing unauthorized devices from communicating through network ports.
+
+The 802.1x authentication standard provides port based network access control
+
+EAP is a universal authentication framework that defines message formats. It is frequently used with 802.1x
+
+### Firewall Types
+
+A firewall is a network security device or software that acts as a barrier between a trusted internal network and untrusted external networks, such as the internet
+
+#### Firewall
+
+A firewall is a network security device or software that monitors incoming and outgoing network traffic
+
+- Firewall rules control the flow of data packets
+- Access Control Lists (ACL) govern how traffic flows through the network.
+- Ports are virtual docks where network services can receive data
+- Protocols are rules and conventions governing data transmission and acceptance
+- A screened subnet is a segment that seperates the internal network from an external network
+
+### IDS/IPS
+
+Intrusion Detection Systems monitor and issue alerts about suspicious activities.
+
+Intrusion Protection Systems are proactive; they block known or potential threats.
+
+These systems used predefined signatures to identify threats
+
+Trends identified in analyses of logs can indicate the presence of new vulnerabilities
+
+### OSI Model vs TCP/IP Model
+
+OSI Application, Presentation, Session layers map onto TCP/IP Application layer
+
+OSI Transport maps onto Transport TCP/IP layer
+
+OSI Network layer maps onto TCP/IP Internet layer
+
+OSI Data link and Physical layers map onto TCP/IP Link layer
+
+## Block 5: Cloud Security Fundamentals
+
+### Cloud Computing
+
+Cloud computing offers on demand services that extend computer or network capabilities
+
+### Virtualization
+
+Virtualization technology is the creation of virtual instances of physical hardware. Vulnerabilities may lead to unauthorized use of virtual resources
+
+#### VM Escape
+
+Virtual Machine escape occurs when an attacker breaks out of a virtual machine to access the host system
+
+#### Resource Reuse
+
+Resource reuse involves sharing physical resources among multiple virtual instances, introducing the risk of data leaks between virtual environments
+
+### Cloud Specific Services
+
+SaaS (Software as a Service)
+IaaS (Infrastructure as a Service)
+PaaS (Platform as a Service)
+SECaaS (Security as a Service)
+
+### Cloud Environments
+
+In cloud computing, availability is often determined by the storage class
+
+### Multi-Cloud System
+
+A multi cloud system involves using multiple cloud service platforms to fulfill diverse computational and storage needs
+
+### Cloud Specific Environments
+
+#### Public
+
+Applications and storage are offered to the general public over the internet
+
+#### Private
+
+Designed for a particular organization and gives the security administrator some control over data and infrastructure
+
+#### Hybrid
+
+Mixing elements of public and private clouds
+
+#### Community
+
+Multiple organizations can share the public portion of a public/private mix
+
+### Infrastructure as Code (IaC)
+
+IaC involves managing and provisioning computer data centers through machine readable definition files
+
+### Serverless Architecture
+
+Serverless architecture uses cloud platforms like AWS, Azure, Google Cloud to host and develop code
+
+## Block 6: Physical and Environmental Security
+
+### Physical Control
+
+Physical controls serve as the first line of defense in controlling access to an organization
+
+### Physical Attack
+
+Physical attacks target tangible components of information systems, such as hardware devices, data storage mediums, and physical locations.
+
+### On-premises
+
+On premises computing architecture involves housing and managing hardware, software, servers, and network resources within an organization's physical location
+
+### Power
+
+Power management involves provisioning, controlling, and efficiently utilizing electricity to maintain uninterrupted facility operation
+
+Uninterruptible Power Supply (UPS) devices offer emergency power during main power failures by storing energy in batteries or supercapacitors
+
+Generators supply power during complete power loss or in areas without standard electrical service, converting mechanical or chemical energy into electrical energy
+
+### Physical Security
+
+- Bollards/Barricades
+- Access Control Vestibules
+- Fencing
+- Video Surveillance
+- Security Guards
+- Access Badges
+- Lighting
+- Sensors (infrared, pressure, microwave, ultrasonic)
+
+## Day One Summary
+
+- CIA Triad & AAA — foundational exam anchors for confidentiality, integrity, availability, and identity management
+- Control Types — preventive, detective, corrective, and their role in layered defense
+- Authentication & Access Controls — MFA, SSO, RBAC/MAC/DAC/ABAC, least privilege, PAM
+- Cryptography Essentials — symmetric vs. asymmetric, hashing/salting, PKI, certificates, key exchange, KMS
+- Network Security Architecture — firewalls, IDS/IPS, segmentation, VLANs, DMZ
+- Cloud Fundamentals — deployment/service models, shared responsibility, virtualization, IaC, serverless
+- Physical Security Controls — access control, surveillance, fire suppression, secure areas
+- Control Categories — managerial, operational, physical
+- Identity Proofing, Federation, Interoperability — supporting IAM concepts
+- Secure Enclave, Steganography, Blockchain — contextual crypto concepts
+- Environmental Controls — HVAC, EMI shielding, hot/cold aisles
+- Multi‑Cloud & Cloud‑Specific Considerations — governance, visibility, misconfiguration risks
