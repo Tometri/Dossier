@@ -678,7 +678,7 @@ Motivation is the reason or drive behind an individual or group's actions
 
 ### Threat Actor Motivations
 
-- Data exfiltration: transferring data from a computer system or network 
+- Data exfiltration: transferring data from a computer system or network
 - Blackmail: threatening to disclose embarassing or damaging information unless certain demands are met
 - Financial gain: Aiming to increase wealth or financial resources
 - Philosophical/Political beliefs: Acting upon deeply held convictions or ideologies related to political or philosophical concepts
@@ -823,7 +823,7 @@ Antivirus software prevents, detects, and removes malware.
 
 ### Zero Day
 
-Refers to a previously unknown software vulnerability that attackers discover and exploit before the vendor or developer becomes aware of it and releases a patch. 
+Refers to a previously unknown software vulnerability that attackers discover and exploit before the vendor or developer becomes aware of it and releases a patch.
 
 The term zero day means the devs had 'zero days' to fix the vuln.
 
@@ -914,7 +914,7 @@ Brute Force Attacks
 
 Activity from blacklisted geolocations
 
-#### Privilege Escalation
+#### Privilege Escalations
 
 Failed privilege escalation detected
 
@@ -954,7 +954,7 @@ Key methods are vulnerability scans and software composition analysis
 - Threat Intelligence Platforms (TIPs): Gather data from various sources to provide threat insights
 - Security Information and Event Management (SIEM) Systems
 
-### Application Security
+### Applications Security
 
 Identifying and mitigating vulnerabilities in software applications
 
@@ -984,13 +984,608 @@ Repositories for organizations to share threats received and learn about others;
 
 Pentesting is the simulation of cyber attacks to identify vulnerabilities
 
+- Planning
+- Recon
+- Exploitation
+- Post-exploitation
+- Reporting
+
 #### Types of Pentests
 
 - Physical: Targets physical barriers such as doors and locks
 - Offensive (Red Teaming): Mimics the actions of threat actors to identify vulnerabilities
 - Defensive (Blue Teaming): Focuses on managing simulated attacks to evaluate defensive strategies
 - Integrated (Purple Teaming): Combines offensive and defensive methodologies
+- Known environment (White Box): Testers have comprehensive info about the system architecture
+- Partially Known environment (Grey Box):
+- Unknown environment (Black Box):
+
+### Responsible Disclosure Program
+
+Responsible Disclosure Program: Framework encouraging the ethical reporting of security vulnerabilities
+
+- Outline secure procedures for external researchers to report discovered vulnerabilities
+- Incentives include monetary rewards and public recognition
+
+### Bug Bounty Program
+
+Bug Bounty Programs offer financial incentives for discovering and reporting
+
+### Analysis
+
+Analysis transforms raw data about vulnerabilities and threats into comprehensive insights
+
+#### Common Vulnerability Scoring System (CVSS)
+
+Industry standard tool for evaluating severity and urgency of vulnerabilities; scores from 0-10
+
+#### Common Vulnerability Enumeration (CVE)
+
+Standardized system for cataloging security flaws; provides historical data about remediation
+
+#### Vulnerability Classification
+
+#### Exposure Factor (EF)
+
+Percentage of loss that a company would experience if a specific asset were compromised
+
+#### Environmental Variables
+
+Specific conditions or factors within an organization's context influencing the impact and exploitability of vulnerabilities
+
+#### Industry/Organizational Impact
+
+Potential consequences of vulnerabilities beyond an organization's boundaries
+
+#### Risk Tolerance
+
+The extent to which an organization is willing to accept exposure to threats
+
+### Message Based
+
+Message based communication poses significant security risks due to its widespread use, users' trust in platforms, and the potential for immediate damage
+
+### Image Based
+
+Involve using digital images to exploit vulnerabilities in software and systems
+
+### File Based
+
+File based threats leverage common file formats to conceal harmful scripts and execute malicious activities
+
+### Voice Call
+
+Voice call threats involve malicious activities conducted through phone calls. Attackers aim to decieve or manipulate individuals into disclosing information by pretending to be trusted entities
+
+### Removable Device
+
+Removable device threats involve using portable storage devices that transmit malware. Examples include data storage devices that are infected with malicious code and spread malware to connected systems,
+
+### Vulnerable Software
+
+Vulnerable software has exploitable flaws or weaknesses in its code or design
+
+- Client based security: involves installing software agents on client devices for active monitoring and protection
+- Agentless security: centralized, it enables monitoring and protection without installing software on individual client devices
+
+### Unsupported Systems and Applications
+
+Software tools or platforms lacking regular updates, security patches, or technical support from developers or vendors. May occur when software reaches its official end of life or a company goes out of business
+
+### Unsecure Network
+
+Unsecure networks lack appropriate security measures. They expose individuals and organizations to cyber threats such as data theft, unauthorized access, and remote device control.
+
+Examples:
+
+- Wireless networks: Vulnerable to unauthorized access and eavesdropping if improperly configures or lacking encryption
+- Wired networks: More secure than wireless but vulnerable without proper segmentation and access controls
+- BLuetooth networks: Exploitable if devices are set to "Discoverable" mode or if bluetooth vulnerabilities are not patched
+
+### Open Service Ports
+
+Open service ports are network communication endpoints that are accessible and unguarded
+
+### Default Credentials
+
+Simple default passwords that ship with hardware or software
+
+### Supply Chain
+
+A supply chain is a network of organizations, resources, and processes involved in creating, producing, and delivering products or services
+
+- Managed Service Providers (MSPs): Organizations that manage IT services for other companies, offering efficiency but potentially introducing risks
+- Vendors: Companies providing products or services to other businesses
+- Suppliers: Providers of raw materials or components used in manufacturing
+
+### Zero Day Vulnerabilities
+
+A flaw that's disclosed before its patch is released; an exploit being used before the organization/developer is aware of it.
+
+Zero day protection is a collective term for the related preventative measures:
+
+- Use a new OS with built-in protections
+- Use multiple firewall layers
+- Use approved application lists
+- Install updates/patches regularly
 
 ## Block 6: Wireless and Mobile Security
 
+### Wireless Devices
+
+Wireless devices operate without a physical wired connection. They use wi-fi, bluetooth, and cell networks to communicate.
+
+- Site surveys: assess the current wireless environment and plan for wi-fi network optimization
+- Heat maps: visualize wireless activity to determine optimal access point placement for coverage and performance
+
+### Mobile Solutions
+
+Mobile Device Management (MDM) is crucial for successful implementation of bring your own device (BYOD) policies.
+
+### Connection Methods
+
+- Bluetooth
+- Wi-Fi
+- Cellular
+- GPS and geolocation
+- Satelletite Communication (SATCOM)
+- Infrared and wireless USB receivers
+
+### Unsecure Networks
+
+Unsecure networks lack appropriate security measures. They expose individuals and organizations to cyber threats such as data theft, unauthorized access, and remote device control.
+
+These include:
+
+- wireless networks
+- wired networks
+- bluetooth networks
+
+### Wireless Security Settings
+
+#### WiFi Protected Access 3 (WPA3)
+
+ uses Simultaneous Authentication of Equals (SAE) to replace the vulnerable preshared key (PSK) system.
+
+#### RADIUS Federation
+
+RADIUS = Remote Authentication Dial In User Service
+enables secure communication among multiple RADIUS servers
+
+#### Cryptographic Protocols
+
+WPA3-Personal and WPA3-Enterprise offer robust encryption methods like AES-CCMP and HMAC-SHA for data protection
+
+AES-CCMP = Advanced Encryption Service
+
+### Mobile Device
+
+#### Side Loading
+
+Installing applications from sources outside the official app store.
+
+#### Jailbreaking
+
+Refers to removing restrictions imposed by the manufacturer or carrier.
+
+#### Authentication Protocols
+
+LDAP, Kerberos, and 802.1X are authentication methods tailored to various environments
+
+Kerberos = AAA for MS AD; uses tickers to grant authentication
+
 ## Day Two Summary
+
+## Block 1: Enterprise Security Architecture
+
+### Zero Trust
+
+Zero trust is a network security concept centered on not trusting any entity or device by default
+
+- Allows access based on various known factors rather than relying on inherent trust
+- Establishes trust through mechanisms such as authentication, authorization, and validation of security posture
+
+### Zero Trust - Control Plane
+
+- Adaptive Identity
+- Threat Scope Reduction
+- Policy-driven Access Control
+- Secured Zone
+- Policy Engine
+- Policy Administrator
+
+### Zero Trust - Data Plane
+
+- Subject/System
+- Policy enforcement point (PEP)
+- Implicit trust zones
+
+### Cloud
+
+Cloud computing offers on demand services that extend computer or network capabilities
+
+### IaC
+
+Infrastructure as Code involves managing and provisioning computer data centers through machine readable definition files.
+
+### Internet of Things (IoT)
+
+IoT encompasses interconnected physical devices that exchange data over the internet or other networks
+
+Components:
+
+- Sensors
+- Smart Devices
+- Wearables
+- Facility Automation
+
+Weak Defaults
+
+### Industrial Control Systems (ICS) / Supervisory Control and Data Acquisition (SCADA)
+
+ICS and SCADA enable organizations to monitor equipment processes, collect data, perform analysis, and remotely control devices and processes.
+
+- Play a crucial role in maintaining efficiency, enabling data driven decsions, and mitigating downtime in industrial settings
+- To defend against cyberattacks, SCADA networks should be isolated from coroporate networks
+
+### Real Time Operating Systems (RTOS)
+
+A Real Time Operating System rapidly switches between tasks, giving the illusion of simultaneous execution of multiple programs on a single processing core.
+
+Provides hard real time responses with fast and deterministic reactions to external events.
+
+Security measures:
+
+- Minimize the attack surface by disabling unnecessary features, services, and access
+- Assume that external systems are insecure
+
+### Embedded Systems
+
+Embedded systems are specialized computer systems designed for specific functions within larger systems, often with significant design constraints
+
+- Constraints include cost, long lifecycle, real time requirements, and reliability needs
+- Often optimized for lifecycle and business driven factors rather than security or maximum computing throughput
+
+### High Availability (HA)
+
+Refers to operational performance, usually uptime. It ensures ability to access a system or service without interruptions.
+
+#### Considerations
+
+##### Availability
+
+Ensuring continous business operations with redundant components, load balancing, failover mechanisms
+
+##### Resilience
+
+Building comprehensive measures and recovery strategies to withstand failures and attacks
+
+##### Cost
+
+Balancing expenses in acquisition, implementation, operation, and maintainence while optimizing resource utilization
+
+##### Responsiveness
+
+Optimizing performance and automating tasks to efficiently meet user demands
+
+##### Scalability
+
+Designing systems capable of growing or shrinking in response to demand
+
+##### Ease of Deployment
+
+##### Risk Transferance
+
+Strategically shifting risks to other parties while maintaining accountability
+
+##### Ease of Recovery
+
+Establishing robust disaster recovery and business continuity plans to minimize downtime
+
+##### Patch Availability
+
+Ensuring timely access to software updates and fixes
+
+##### Inability to Patch
+
+The challenge of being unable to apply critical security updates, often because of legacy systems or technical constraints
+
+##### Power Optimization
+
+Optimizing energy efficiency and resilience against power based attacks across the entire network
+
+##### Computing Resources
+
+Effectively distributing and optimizing hardware and software components for data processing and computation
+
+### Secure Access Service Edge (SASE)
+
+Secure access service edge is a cybersecurity and networking framework. It converges network security functions with WAN capabilities into a single cloud delivered service model
+
+SASE delivers secure, optimized access to users regardless of location by combining network connectivity and security services from the cloud
+
+## Block 2: Secure Network Design
+
+### Virtual Private Network (VPN)
+
+A virtual private network establishes a secure connection between two or more devices over the internet, even if they are not on the same private network
+
+### Remote Access
+
+Remote access allows authorized users to connect to a network, system, or application from a location outside the organization's physical premises.
+
+Remote Access Technologies:
+
+- Remote Access Service (RAS)
+- Virtual Private Networks (VPN)
+
+### Tunneling
+
+Tunneling creates a secure pathway for data transmission across networks via encapsulation
+
+Protocols like Transport Layer Security (TLS) and Internet Protocol Security (IPSec) enhance the security of tunneling by providing encryption and integrity mechanisms
+
+Internet Key Exchange (IKE), the key management protocol for IPSec, has two phases. Phase 1 negotiates the ISAKMP SA, and Phase 2 negotiates the IPSec Sas.
+
+### Network Access Control (NAC)
+
+NAC is a method to enforce policy-driven security solutions at the network entry level.
+
+### Micro-Segmentation
+
+Micro segmentation divides the network into very small, isolated segments - down to individual workloads or applications.
+
+## Block 3: Identity and Access Management (IAM)
+
+### Inter-operability
+
+#### Single-Sign-On (SSO)
+
+SSO enables one set of credentials for access to multiple services or applications
+
+SSO Protocols:
+
+- LDAP = Lightweight Directory Access Protocol
+- OAuth = Open Authorization
+- SAML = Security Assertion Markup Language
+
+#### Federation and SSO
+
+### Types of Standards
+
+Password standards define rules for creating, managing, and storing passwords.
+
+Access Control Standards determine who has access to specific resources within the organization's network and systems.
+
+#### Access Control Types
+
+- Attribute Based Access Control (ABAC)
+- Role Based Access Control (RBAC)
+- Discretionary Access Control (DAC)
+- Mandatory Access Control (MAC)
+
+## Block 4: Endpoint Security Solutions
+
+### Data Loss Prevention (DLP)
+
+Data loss prevention is a comprehensive approach to preventing users from sending sensitive or critical information outside the corporate network.
+
+### NAC
+
+Network access control is a method to enforce policy driven security solutions at the network entry level
+
+- Checks if devices comply with predefined security rules before granting access to the network
+
+### Endpoint Detection and Response (EDR) and Extended Detection and Response (XDR)
+
+Endpoint detection and response (EDR) systems monitor endpoints such as desktops, laptops, mobile devices; detect and respond to signs of malicious activity.
+
+Extended detection respon
+
+### User Behavior Analysis
+
+User behavior analytics use machine learning algorithms to track, collect, and assess user behavior on a network.
+
+### Secure Baselines
+
+Secure baselines are standardized sets of minum configurations and security controls for systems and software.
+
+- Asset Tagging: Assigning unique identifiers to each asset for easier tracking
+- Version Control:
+- Manual Review: a human reviews data, logs, and systems to help prioritize vulnerabilities based on actual organizational risk. Human judgment and intuition can identify issues that automated tools miss.
+- Disable unneccessary services: Turn off services and features not required for the system's primary function
+- Validation Testing: confrim that the baseline settings do not disrupt necessary functions
+- Rollback plan: have a plan to revert changges in the event of unforeseen issues during deployment
+- Patch management: Regurlarly update software and sytems to patch known vulnerabilities
+- Review and update: Periodically review the secure baseline to ensure that it aligns with current best practices in cybersecurity
+
+### Hardening Targets
+
+### Containerization and Virtualization
+
+## Block 5: Secure Communications
+
+### Software Defined Wide Area Network (SD-WAN)
+
+SD-WAN is a networking architecture that uses software based controls to optimize and manage data traffic across a wide are network.
+
+- Enhances network manaegement flexibility by
+
+### SASE
+
+Cloud native architecture that manages network security functions with WAN capabilities
+
+### Implementation of Secure Protocols
+
+The implementation of secure protocols refers to creating encrypted pathways
+
+### Email Security
+
+Email security involves measures used to secure the access and content of email accounts or services
+
+#### Domain Based Message Authentication, Reporting and Conformance (DMARC)
+
+Domain based message authentication, reporting, and conformance helps receivers verify the authenticity of emails from specific domains
+
+DMARC Process:
+
+- SPF Check
+- DKIM check
+- DMARC policy retrieval
+- Policy Enforcement
+- Reporting
+
+## Block 6: Application Security
+
+### Code Signing
+
+Code signing digitally signs executables and scripts to verify authenticity and integrity
+
+### Sandboxing
+
+Creates a confined execution environment for running untrusted or suspicious code safely
+
+### Integrations and APIs
+
+Application Programming Interfaces (API)
+
+### Secure SDLC & DevSecOps
+
+## Block 1: Monitoring and Computing Resources
+
+### Log Aggregation
+
+log aggregation involves gathering log data from various sources into a centralized repository for examination
+
+- A critical process
+- Helps turn isolated data points into a coherent narrative
+
+Log aggregation tools and processes:
+
+- SIEM
+- syslog
+
+### Alerting
+
+Alerting is the early warning system for security infrastructure
+
+- Using predefined rules, alerts indicate when immediate attention is required
+- Alert tuning refers to setting alert sensitivity
+
+### Security Information and Event Management (SIEM)
+
+A SIEM system is a specialized device or software for security monitoring. It collects, correlates and analyzes logs from multiple systems.
+
+SIEM Functions:
+
+- log collection
+- log normalization
+- log aggregation
+- log correlation
+- reporting
+
+### NetFlow
+
+NetFlow is a protocol that collects and monitors network traffic data; it provides various traffic insights:
+
+- Source
+- Destination
+- Volume
+- Paths
+
+### Simple Network Management Protocol (SNMP) Traps
+
+SNMPv3 is a popular protocol for managing and monitoring networks. SNMP traps are alerts from SNMP enabled devices when they have status changes. This facilitates speedy response.
+
+Optional SNMPv3 features:
+
+- Authentication: Verifies the legitimacy of trap sources, preventing unauthorized devices from sending false alerts
+- Encryption: Offers encryption to maintain confidentiality of trap contents
+
+### Vulnerability Scanners
+
+Vulnerability scanners automate the identification of weaknesses in sytems and networks
+
+### Deception and Disruption Technology
+
+Deception technology involves the use of decoys, traps, and other deceptive measures to mislead and thwart attackers.
+
+Disruption Technology
+
+#### Honeypot
+
+A honeypot is a decoy system or network segment designed to attract and trap potential attackers-mimcs legitimate systems or services to lure attackers into interacting with it, allowing security teams to monitor and analyze behavior
+
+#### Honeynet
+
+A network of interconnected honeypots and other decoy systems designed to deceive and trap potential attackers
+
+#### Honeyfile
+
+Honey files are files created to serve as bait for potential attackers designed to lure them into interaction
+
+#### Honeytokens
+
+Honeytokens are pieces of faake or fabricated data placed within a system or network to detect unauthorized access or activity
+
+## Block 2: Incident Response Procedures
+
+### Incident Response Process
+
+- Preparation
+- Detection
+
+### Post Incident Activity
+
+Post incident activity is the "lessons learned" phase of incident response
+
+- Meet within two weeks
+- Complete documentation about the incident
+- Discuss response process
+- Change response process if needed
+
+### Training
+
+Training equips teams with the knowledge and protocols for effectively managing security incidents
+
+Role based training for individuals and departments
+Tabletop exercises and simulations for practice responding
+
+### Testing
+
+Testing is the rigorous examination of incident response procedures
+
+#### Tabletop Exercises
+
+Simulate hypothetical situations that mirror real world threats
+
+- Each participant plays a role corresponding to their actual emergency responsibilities
+- Time pressure helps simulate the urgency of real incidents
+- Decision points pause the action for strategic discussions about how to proceed
+- Detailed records are kept of every action, decision, and discussion
+
+#### Simulation Exercises
+
+Simulation exercises build upon tabletop exercises with simulated tech environments such as sandboxed or isolated replicas of networks
+
+Tips for conducting simulations:
+
+- Define key performance indicators (KPIs) to evaluate response effectiveness
+- Introduce unexpected elements to test teams adaptibility
+- Include post exercise discussion to identify gaps and discuss improvements
+
+### Root Cause Analysis
+
+Root cause analysis is criticial for identifying the reasons underlying security incidents
+
+- Data collection
+
+### Threat Hunting
+
+Proactive search through networks and data sets to detect and isolate advanced threats
+
+- Targets threats that evade traditional reactive security measures
+- Involves setting a specific type of threat, such as lateral moves or data exfiltration
+- Discoveries may lead to threat remediation and updated security measures
+
+## Block 3: Digital Forensics and Investigation
