@@ -1,0 +1,105 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachines_SecureVM_name": {
+            "defaultValue": "SecureVM",
+            "type": "String"
+        },
+        "disks_SecureVM_OsDisk_1_70d0cb7b8fdf4f56a2834c26b2112a19_externalid": {
+            "defaultValue": "/subscriptions/691a8e0e-5094-4727-8f11-1c00ff680b8b/resourceGroups/VNet/providers/Microsoft.Compute/disks/SecureVM_OsDisk_1_70d0cb7b8fdf4f56a2834c26b2112a19",
+            "type": "String"
+        },
+        "networkInterfaces_securevm279_externalid": {
+            "defaultValue": "/subscriptions/691a8e0e-5094-4727-8f11-1c00ff680b8b/resourceGroups/VNet/providers/Microsoft.Network/networkInterfaces/securevm279",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2025-11-01",
+            "name": "[parameters('virtualMachines_SecureVM_name')]",
+            "location": "eastus",
+            "zones": [
+                "1"
+            ],
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_F1als_v7"
+                },
+                "additionalCapabilities": {
+                    "hibernationEnabled": false
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "debian",
+                        "offer": "debian-12",
+                        "sku": "12-gen2",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "osType": "Linux",
+                        "name": "[concat(parameters('virtualMachines_SecureVM_name'), '_OsDisk_1_70d0cb7b8fdf4f56a2834c26b2112a19')]",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "managedDisk": {
+                            "storageAccountType": "Premium_LRS",
+                            "id": "[parameters('disks_SecureVM_OsDisk_1_70d0cb7b8fdf4f56a2834c26b2112a19_externalid')]"
+                        },
+                        "deleteOption": "Delete",
+                        "diskSizeGB": 30
+                    },
+                    "dataDisks": [],
+                    "diskControllerType": "NVMe"
+                },
+                "osProfile": {
+                    "computerName": "[parameters('virtualMachines_SecureVM_name')]",
+                    "linuxConfiguration": {
+                        "disablePasswordAuthentication": true,
+                        "ssh": {
+                            "publicKeys": [
+                                {
+                                    "path": "/home/azureuser/.ssh/authorized_keys",
+                                    "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQChJmYtlt4RNrJipxnGQ6rGNvK4FmFO6tqEYqHhftU3fbpeRXEr2r0RAiBW4cmLsOd5Euu/Q4S250NQG6OHnlzQfyDSFWElvDH7MlsML2DQTgAyalxidniAKsDvRNciB8g9cH03VGhyayfjG5UeirYyHn/vZyAouGTs0S7eAEgxUKgi4AJfnyJL+Q4objaz/PYkSyoYlxUIR245X9HPDoTm2+9CA1IwRX2PPiU7Abs4EPhJ+4d2XZTaWQzHyy6I60OfPmH5SpmONtCuDkPPbfgPorZ4qCduCzHPRuSWWkTE8cRkkAXIApLZrtfGiz+tQZo+zROvri/maZZCPkEdxrvhEqvKDUNcBRvterlocjNhwsITwfDTH5qgdC9O/cB3YnzgD13G0DtUwkw/boPytiMhdlVM+Z2ZmR/iRRVOJXqPr2JiXsXO4kr2yHmoiZiiicqlz6z5kHSy46W42RCvRuHmUQojZq7jBwKZs0C8cA6Ivu9GC4dzVCim4v3n5Qk/2C0= generated-by-azure"
+                                }
+                            ]
+                        },
+                        "provisionVMAgent": true,
+                        "patchSettings": {
+                            "patchMode": "ImageDefault",
+                            "assessmentMode": "ImageDefault"
+                        }
+                    },
+                    "secrets": [],
+                    "allowExtensionOperations": true,
+                    "requireGuestProvisionSignal": true,
+                    "adminUsername": "azureuser"
+                },
+                "securityProfile": {
+                    "uefiSettings": {
+                        "secureBootEnabled": true,
+                        "vTpmEnabled": true
+                    },
+                    "securityType": "TrustedLaunch"
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[parameters('networkInterfaces_securevm279_externalid')]",
+                            "properties": {
+                                "deleteOption": "Detach"
+                            }
+                        }
+                    ]
+                },
+                "diagnosticsProfile": {
+                    "bootDiagnostics": {
+                        "enabled": true
+                    }
+                }
+            }
+        }
+    ]
+}
