@@ -1,0 +1,16 @@
+	Ten Identical Images with all hashes differing other than two of them. Searching through MD5 hashes.
+1-34703f6845b066613adcc96d41bcc322
+2-9606922eba09c05e6d563168389d28af
+3-f7caf188afcc6191fac0e92f447b8a37
+4-494e48b39d16474d3cbec78355e39d98
+5-9606922eba09c05e6d563168389d28af
+6-e94e34a51bbac5e249c82dd1e63e9d71
+7-bd30b09dab1e7a22888a8e400dd058bd
+8-c367a3cf245a30f42d5a2a788de48253
+9-9606922eba09c05e6d563168389d28af
+10-a73df34478598c8c4c5bf507a33714cf
+
+	After examining the images, I've found that images 2,5,9 have the same MD5 values.
+	2-9606922eba09c05e6d563168389d28af
+	5-9606922eba09c05e6d563168389d28af
+	9-9606922eba09c05e6d563168389d28af
