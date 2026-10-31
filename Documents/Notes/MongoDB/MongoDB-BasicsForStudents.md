@@ -69,3 +69,74 @@ SQL vs NoSQL: SQL are based on traditional tabular formats while Not only SQL da
 
 Schemas: Are the rules governing how data is stored and organized in the database.
 
+## Polymorphic Data
+
+Polymorphic data is data that can take on multiple types within the same structure.
+
+## Flexible Schema
+
+Each data record can have a unique structure. Permits various data types. Unstructured/semi-structured data.
+
+## MongoDB Hierarchy
+
+### Document
+
+Documents are the smallest unit of data in MongoDB. Typically store object and related metadata. Field-value pairs. Data types: strings, numbers, dates, arrays, objects, and more.
+
+Document model: Similar to JavaScript Object Notation (JSON).
+
+### Collection
+
+A collection is a group of documents that correspond to an entity. Can support multiple entities and different shapes.
+
+### Database
+
+A group of collections.
+
+### Node
+
+An individual MongoDB instance.
+
+### Cluster
+
+A group of nodes. There are two cluster types: Replica set and sharded.
+
+## Syntax
+
+```Document Model Syntax (JSON)
+{
+  "_id": ObjectId(
+"5f4f7fef2d4b45b7f11b6d7a"),
+  "user_id": "Sean",
+  "age": 29,
+  "Status": "A"
+}
+```
+This document represents a user, their id in the system, their age, and their status.
+
+The "_id" field holds the ObjectID for the document. The _id is used as a primary key; its value must be unique in the collection, it is immutable, and may be of any type other than an array.
+
+The JSON document syntax uses curly brackets to mark the start and end of the document. The fields (keys) are seperated from their values by a colon. The field values are wrapped in quotation marks, as are string values. Other values, like numbers, are not. Each field-value pair is separated by a comma within the document.
+
+## Key Points 2
+
+Flexibility: The document model has a flexible schema and can work well with structured and semi-structured data.
+
+MongoDB's Hierarchy: Documents>Collections>Database>Node>Cluster
+
+The Golden Rule: Data that is accessed together should be stored together.
+
+Document Model Syntax
+
+Scaling: adjusitng performance of a database using more performant hardware (vertical) or adding additional hardware (horizontal).
+
+Replication: creating redundant nodes to ensurea vailability and protect from data loss in the event of node failure.
+
+CAP Therorem: There is always tradeoff between Consistency, Availability, and Partition Tolerance.
+
+## MongoDB Atlas Key Points
+
+Self-managed vs Fully-managed: fully-managed systems offer a blend of convenience and customization so you can focus on your priorities.
+
+MongoDB Atlas: DBaaS that works on all major cloud providers and supports a rich, modern set of features.
+
