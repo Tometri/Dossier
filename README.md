@@ -37,7 +37,7 @@ Curated archive distilled from `ProjectPortfolio`, `A32Termux`, and scattered co
 | [`Documents/AzureTemplates/`](Documents/AzureTemplates/) | `SecureVM.json` + `AzureFirewalledVNet.zip` — VNet + Firewall + TrustedLaunch VM | Cloud / infra review |
 | [`Documents/Notes/`](Documents/Notes/) | `AD_DS.md`, `CiscoNetworkingBasics.md`, `AWS_*.md`, `CIAT_Sec+`, `assembly.md`, `GitCommands.md` — condensed study notes | Reference |
 | [`CiscoPacketTracer/`](CiscoPacketTracer/) | `.pka` activities — wireless router + simple network + quizzes | Networking labs |
-| [`Python/`](Python/) | `Codedex` (Python / Intermediate / GenAI / NumPy) + `PythonCrashCourse` — ~80 scripts | Code samples |
+|| [`Python/`](Python/) | `Codedex` (50+ scripts) + `PythonCrashCourse` — code samples | Reference |
 | [`HTML/codedex/`](HTML/codedex/) | `Elements` / `Forms` / `Structure` — ~30 hand-built pages | Frontend basics |
 
 ### × Featured — start here
@@ -71,7 +71,7 @@ ls Documents/Certificates/ISC2_CC/
 az deployment group create -g rg-lab --template-file Documents/AzureTemplates/SecureVM.json
 
 # run a Python sample
-python Python/Codedex/Python/calculator.py
+python Python/Codedex/calculator.py
 ```
 
 ### △ Credentials at a glance
