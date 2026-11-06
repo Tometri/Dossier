@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors and IDEs
+.vscode/
+.idea/
+.vs/
+*.swp
+*.swo
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Obsidian local config (keep notes, ignore workspace state)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Logs and caches
+*.log
