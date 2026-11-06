@@ -5,23 +5,22 @@ This is the Obsidian vault tracked in the Dossier GitHub repository for cross-de
 ## Usage
 
 ### Sync between devices
+
+There is no sync script in this repo — sync with plain git from the repo root:
+
 ```bash
-# From the vault directory
 cd ~/Documents/GitHub/Dossier
-
-# Manual sync
-./scripts/dev/obsidian-sync.sh
-
-# Or using hermes
-hermes -t "Sync Obsidian vault to GitHub"
+git pull
+git add ObsidianVault
+git commit -m "notes: <what changed>"
+git push
 ```
 
 ### Daily Notes
-The vault has the Daily Notes plugin enabled. Notes are created in the daily notes folder.
+Daily Notes: there is no Daily Notes folder in this repo yet — if the plugin is enabled, create one before relying on it.
 
 ## Structure
 - `ComputerForensics/` - Computer forensics notes and labs
-- `scripts/` - Obsidian-specific scripts
 
 ## Git Notes
 - Always pull before starting work
