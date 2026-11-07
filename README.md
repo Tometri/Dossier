@@ -37,12 +37,18 @@ Curated archive distilled from `ProjectPortfolio`, `A32Termux`, and scattered co
 | [`Documents/AzureTemplates/`](Documents/AzureTemplates/) | `SecureVM.json` + `AzureFirewalledVNet.zip` — VNet + Firewall + TrustedLaunch VM | Cloud / infra review |
 | [`Documents/Notes/`](Documents/Notes/) | `AD_DS.md`, `CiscoNetworkingBasics.md`, `AWS_*.md`, `CIAT_Sec+`, `assembly.md`, `GitCommands.md` — condensed study notes | Reference |
 | [`CiscoPacketTracer/`](CiscoPacketTracer/) | `.pka` activities — wireless router + simple network + quizzes | Networking labs |
-|| [`Python/`](Python/) | `Codedex` (50+ scripts) + `PythonCrashCourse` — code samples | Reference |
+| [`Python/`](Python/) | `Codedex` (50+ scripts) + `PythonCrashCourse` — code samples | Reference |
+| [`PowerShell/`](PowerShell/) | `PortEnumeratorPS5.ps1`, `PortEnumeratorPS7.ps1` — port enumeration scripts | Reference |
+| [`ObsidianVault/`](ObsidianVault/) | Cross-device notes, incl. `ComputerForensics/` | Reference |
+| [`ProfileREADMEs/`](ProfileREADMEs/) | Profile README drafts (80s + CyberPunk, V2) | Reference |
+| [`HTML/`](HTML/) | `codedex/` — ~30 hand-built pages | Frontend basics |
 | [`HTML/codedex/`](HTML/codedex/) | `Elements` / `Forms` / `Structure` — ~30 hand-built pages | Frontend basics |
 
 ### × Featured — start here
 
 **1. [`it_support_bot`](https://github.com/Tometri/it_support_bot) — IT Support Chatbot (Python)** — scored retrieval over a curated KB (password resets, VPN, error codes) with cited sources + deterministic fallback; `http.server` UI + CLI. The most recruiter-relevant project in this dossier.
+
+  How it works: a curated knowledge base is chunked and scored against the user's question; the best-matching chunk grounds the answer with a cited source. If no chunk scores high enough — or no LLM key is present — it falls back deterministically to a safe, scripted answer instead of guessing, with escalation paths for out-of-scope and sensitive requests. Entry points are the CLI and a lightweight `http.server` web UI on `127.0.0.1:8000`. See [`it_support_bot.md`](it_support_bot.md) for the architecture summary.
 
 **2. Azure VNet + Firewall + SecureVM** — `Documents/AzureTemplates/SecureVM.json` — Debian 12-gen2, Premium LRS, Secure Boot + vTPM, SSH-key auth, boot diagnostics. Deployed in Azure, template archived here.
 
@@ -84,6 +90,12 @@ python Python/Codedex/calculator.py
 | AWS Educate: Intro to Generative AI | May 20, 2026 | — |
 | AI Literacy Professional (Pearson) | Feb 20, 2026 | — |
 | AI in Cybersecurity (Cato) | Aug 24, 2026 | — |
+| Cato SSE Expert Certification | Oct 31, 2026 | — |
+| MongoDB Basics for Students | Oct 31, 2026 | — |
+| SASE Business Impact and Strategy (Cato) | Oct 30, 2026 | — |
+| SASE Advanced Security / Deployment and Management (Cato) | Oct 29, 2026 | — |
+| SASE Expert Level 1 / Level 2 (Cato) | Oct 29, 2026 | — |
+| Zero Trust Security Essentials (Cato) | Oct 28, 2026 | — |
 | CompTIA Linux+ | In queue — voucher secured | — |
 
 Verify: [credly.com/users/tristen-mcduff](https://credly.com/users/tristen-mcduff) · Full detail in [@Tometri profile](https://github.com/Tometri).
@@ -92,6 +104,7 @@ Verify: [credly.com/users/tristen-mcduff](https://credly.com/users/tristen-mcduf
 
 - **Resume:** Canonical files are `Documents/Resume/Archive/Tristen_McDuff_Resume_IT_2026*.docx` — enhanced build mirrors the profile.
 - **Certificates:** Original PDFs retained by issuer folder; filenames are issuer-original.
+- **Theme note:** the KERBEROS KORP framing, unit numbers, and serial numbers are a retro theme, not an official affiliation or identifier.
 - **Naming:** `Dossier` is the curated set. `ProjectPortfolio` and `A32Termux` remain as raw sources — this repo is the signal, not the noise.
 
 <div align="left">
