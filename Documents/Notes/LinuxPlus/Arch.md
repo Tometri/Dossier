@@ -224,3 +224,29 @@ EDITOR=nano visudo
 This allows you to create a new user, set the password, enable super user privilege on the new user editing the file and removing the # from %wheel ALL=(ALL:ALL) ALL. 
 
 With the new user created, the network functioning, ssh + tailscale enabled the VM is able to be reached remotely.
+
+# 1.2
+
+## Proving Sudo and Locking Root
+
+Using
+
+```shell
+sudo -l
+```
+while signed into the user created earlier should show that sudo access is enabled.
+
+With full sudo access confirmed, root is safe to lock using
+
+```shell
+sudo passwd --lock root
+```
+
+then verify it with
+
+```shell
+sudo passwd --status root
+```
+it should show something similar to "root L...".
+
+## SSH Hardening
